@@ -3,7 +3,7 @@ import smtplib
 import os
 
 app = Flask(__name__)
-email = os.environ.get('SITE_EMAIL')
+site_email = os.environ.get('SITE_EMAIL')
 psswd = os.environ.get('SITE_PASSWORD')
 to = os.environ.get('MY_EMAIL')
 
@@ -39,9 +39,9 @@ def SendEmail(name, email, msg):
 	  smtp.ehlo()
 
 	  smtp.login(email, psswd)
-
+	  print(em)
 	  subject = "Portfolio Website Message"
 	  body = f"Name: {name}\nEmail: {email}\n{msg}"
 	  content = f'Subject: {subject}\n\n{body}'
 
-	  smtp.sendmail(email, to , content)
+	  smtp.sendmail(site_email, to , content)
