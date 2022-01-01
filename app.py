@@ -40,10 +40,9 @@ def SendEmail(name, email, msg):
 	  smtp.starttls()
 	  smtp.ehlo()
 
-	  smtp.login(site_email, psswd)
-	  print(em)
+	  smtp.login(str(site_email), str(psswd))
 	  subject = "Portfolio Website Message"
 	  body = f"Name: {name}\nEmail: {email}\n{msg}"
 	  content = f'Subject: {subject}\n\n{body}'
 
-	  smtp.sendmail(site_email, to , content)
+	  smtp.sendmail(str(site_email), str(to) , content)
