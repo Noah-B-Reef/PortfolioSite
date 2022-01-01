@@ -31,9 +31,9 @@ def contact():
 	return render_template('contact.html')
 
 def SendEmail(name, email, msg):
-	site_email = os.environ.get('SITE_EMAIL')
-	psswd = os.environ.get('SITE_PASSWORD')
-	to = os.environ.get('MY_EMAIL')
+	site_email = os.environ['SITE_EMAIL']
+	psswd = os.environ['SITE_PASSWORD']
+	to = os.environ['MY_EMAIL']
 	with smtplib.SMTP('smtp.gmail.com', 587) as smtp:
 	  smtp.ehlo()
 	  smtp.starttls()
