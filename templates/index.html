@@ -1,0 +1,29 @@
+{% extends "layout.html" %}
+{% block body %}
+  <div class="container">
+   <h1 class="portfolio-text" style="font-size: 40px; margin-left: 15px;">About Me!</h1> 
+    <div class="portfolio-img-container image">
+      <img src="../static/images/DSC_7172.png" class="portfolio-img">
+    </div>
+
+    <div class="portfolio-text portfolio-bio-container bio" style="font-size: 24px;">
+    This is my portfolio website! Thank you for checking it out! My name is Noah Reef and I am an Applied Mathematics major with a Computer Science Minor at California State Polytechnic University, Pomona. I am passionate about Mathematics and Computer Science. My hobbies include gaming, coding, and learning new things.
+    </div>
+    <div class="portfolio-text portfolio-skills">
+      <h2 class="skills" style="text-decoration: underline;"> Skills: </h2>
+      <ul>
+        <li class="item-1">Intermediate in programming languages such as Python, MATLAB, C++, and Javascript</li>
+        <li class="item-2">Experience working with API's</li>
+        <li class="item-3">Experience with using SQL to manage databases</li>
+      </ul>
+    </div>
+  </div>
+  <script>
+    ScrollReveal().reveal('.image', {delay: 250});
+    ScrollReveal().reveal('.bio', {delay: 500});
+    ScrollReveal().reveal('.skills', {delay: 750});
+    ScrollReveal().reveal('.item-1', {delay: 825});
+    ScrollReveal().reveal('.item-2', {delay: 900});
+    ScrollReveal().reveal('.item-3', {delay: 975});
+  </script>
+{%endblock%}

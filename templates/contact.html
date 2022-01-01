@@ -1,0 +1,35 @@
+{% extends "layout.html" %}
+{% block body %}
+<form action="/contact" method="post">
+  <div class="container">
+    <h1 class="portfolio-text" style="text-decoration: underline; font-size: 40px;">Contact:</h1>
+    <div class="portfolio-text contact">
+      <input type="text" name="fname" placeholder="First Name" style="min-height: 30px;"></input>
+      <input type="text" name="lname" placeholder="Last Name" style="margin-left: 100px; min-height: 30px;"></input>
+      <div class="portfolio-text">
+        <textarea rows="10" cols="70" name="msg" placeholder="Message" style="margin-top: 20px;"></textarea>
+      </div>
+      <div>
+        <div>
+          <input type="text" name="email" placeholder="Email" style="margin-top: 20px; min-height: 30px;"></input>
+        </div>
+        <input type="submit" value="Submit" style="margin-top: 20px;"></input>
+      </div>
+    </div>
+
+    <div class="portfolio-text contact-info">
+    <h2 style="text-decoration: underline; font-size: 40px;">Contact Info:</h2>
+    <ul>
+        <li>
+          <a href="https://www.linkedin.com/in/noahreef/" target="__blank">LinkedIn </a>
+        </li>
+        <li>
+          <a href="https://www.instagram.com/noah_the_reef/" target="__blank"> Instagram </a>
+        </li>
+        <li>
+          <a href="https://github.com/Noah-B-Reef" target="__blank"> Github </a>
+        </li>
+    </ul>
+    </div>
+</form>
+{%endblock%}
