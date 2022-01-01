@@ -1,7 +1,11 @@
 from flask import Flask, render_template, redirect, request
 import smtplib
+import os
 
 app = Flask(__name__)
+email = os.environ.get('SITE_EMAIL')
+psswd = os.environ.get('SITE_PASSWORD')
+to = os.environ.get('MY_EMAIL')
 
 @app.route('/')
 def index():
@@ -34,10 +38,10 @@ def SendEmail(name, email, msg):
 	  smtp.starttls()
 	  smtp.ehlo()
 
-	  smtp.login('portfolio.site4noah@gmail.com', '&PoRtFoLiOsItE12')
+	  smtp.login(email, psswd)
 
 	  subject = "Portfolio Website Message"
 	  body = f"Name: {name}\nEmail: {email}\n{msg}"
 	  content = f'Subject: {subject}\n\n{body}'
 
-	  smtp.sendmail('portfolio.site4noah@gmail.com', 'n.reef23@gmail.com', content)
+	  smtp.sendmail(email, to , content)
