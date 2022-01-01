@@ -6,10 +6,94 @@
     <div class="portfolio-text">
       <h1>Projects</h1>
       <p1>Here are some of the projects that I have worked on, this list will be updated regularly.</p1>
-      <div class=container>
-        
-      </div>
+      <div class="content-wrapper" style="padding: 30px;">
 
+        <div class="projects-wrapper">
+          <a href="https://github.com/Noah-B-Reef/DiscordManagerBot">
+            <div class="project-item-wrapper">
+              <div class="project-img-background" style="background-image:url(../static/images/image1.jpg)"></div>
+
+              <div class="img-text-wrapper">
+              <div class="logo-wrapper">
+                <img src="../static/images/discord.png" alt="">
+              </div>
+
+              <div class="subtitle">I built a Discord Moderator Bot, that manages Discord Servers.</div>
+            </div>
+            </div>
+          </div>
+        </a>
+        <!--
+         <div class="projects-wrapper">
+          <div class="project-item-wrapper">
+            <div class="project-img-background" style="background-image:url(../static/images/project-tbd.png)"></div>
+            <div class="img-text-wrapper">
+            <div class="logo-wrapper">
+              <img src="../static/images/tbd.png" alt="">
+            </div>
+
+            <div class="subtitle">Project To Be Determined...</div>
+
+          </div>
+        </div>
+
+         <div class="projects-wrapper">
+          <div class="project-item-wrapper">
+            <div class="project-img-background" style="background-image:url(../static/images/project-tbd.png)"></div>
+
+            <div class="img-text-wrapper">
+            <div class="logo-wrapper">
+              <img src="../static/images/tbd.png" alt="">
+            </div>
+
+            <div class="subtitle">Project To Be Determined...</div>
+          </div>
+        </div>
+
+         <div class="projects-wrapper">
+          <div class="project-item-wrapper">
+            <div class="project-img-background" style="background-image:url(../static/images/project-tbd.png)"></div>
+
+            <div class="img-text-wrapper">
+            <div class="logo-wrapper">
+              <img src="../static/images/tbd.png" alt="">
+            </div>
+
+            <div class="subtitle">Project To Be Determined...</div>
+          </div>
+        </div>
+
+         <div class="projects-wrapper">
+          <div class="project-item-wrapper">
+            <div class="project-img-background" style="background-image:url(../static/images/project-tbd.png)"></div>
+
+            <div class="img-text-wrapper">
+            <div class="logo-wrapper">
+              <img src="../static/images/tbd.png" alt="">
+            </div>
+
+            <div class="subtitle">Project To Be Determined...</div>
+          </div>
+        </div>
+      </div>
+    </div>
+-->
+<script>
+  const portfolioItems = document.querySelectorAll('.project-item-wrapper');
+
+  portfolioItems.forEach(portfolioItem => {
+    portfolioItem.addEventListener('mouseover', () => {
+      console.log(portfolioItem.childNodes[1].classList)
+      portfolioItem.childNodes[1].classList.add('image-blur');
+    });
+
+    portfolioItem.addEventListener('mouseout', () => {
+      console.log(portfolioItem.childNodes[1].classList)
+      portfolioItem.childNodes[1].classList.remove('image-blur');
+    });
+  });
+
+</script>
 
     
 {% endblock %}

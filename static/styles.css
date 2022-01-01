@@ -3,12 +3,11 @@
   position:  relative;
   width:auto;
   height:1000px;
-  border: 2px solid red;
 }
 
+/* Contact Stylings */
 .contact
 {
-  border:  2px solid green;
   width: 900px;
   padding: 10px;
   margin: 0;
@@ -17,13 +16,15 @@
 
 .contact-info
 {
-  border:  2px solid blue;
   width: 900px;
   padding: 10px;
   margin: 0;
   top: 450px;
   position: absolute;
+  border: 2px solid white;
 }
+
+/* Bio Stylings */
 .portfolio-bio-container
 {
   border:  2px;
@@ -66,7 +67,7 @@
 }
 
 
-/* navbar stylings */
+/* Navbar Stylings */
 
 .navbar
 {
@@ -77,7 +78,6 @@
   background-color: white;
 }
 
-/* Style the links inside the navigation bar */
 .navbar a {
   float: left;
   color: black;
@@ -87,9 +87,65 @@
   font-size: 17px;
 }
 
-/* Change the color of links on hover */
 .navbar a:hover {
   background-color: #ddd;
   color: black;
 }
 
+/* Projects Stylings */
+
+.projects-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.project-item-wrapper
+{
+  position: relative;
+  
+  height: 350px;
+  width: auto;
+}
+
+.project-img-background {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 350px;
+  width: 100%;
+
+}
+
+.img-text-wrapper {
+  position: absolute;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  text-align: center;
+  padding-left: 100px;
+  padding-right: 100px;
+}
+
+.img-text-wrapper .subtitle {
+  transition: 1s;
+  color: transparent;
+}
+
+.image-blur {
+  transition: 1s;
+  filter: brightness(10%);
+}
+
+.img-text-wrapper:hover .subtitle {
+  color: #d7d9db;
+  font-family: 'TeX';
+  font-weight: 600;
+}
+
+.logo-wrapper img {
+  width: 90%;
+  margin-bottom: 20px;
+}
