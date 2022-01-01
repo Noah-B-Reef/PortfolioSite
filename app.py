@@ -34,6 +34,10 @@ def SendEmail(name, email, msg):
 	site_email = os.environ['SITE_EMAIL']
 	psswd = os.environ['SITE_PASSWORD']
 	to = os.environ['MY_EMAIL']
+
+	print(site_email)
+	print(psswd)
+	print(to)
 	with smtplib.SMTP('smtp.gmail.com', 587) as smtp:
 	  smtp.ehlo()
 	  smtp.starttls()
