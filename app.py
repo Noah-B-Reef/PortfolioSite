@@ -35,15 +35,12 @@ def SendEmail(name, email, msg):
 	psswd = os.environ['SITE_PASSWORD']
 	to = os.environ['MY_EMAIL']
 
-	print(site_email)
-	print(psswd)
-	print(to)
 	with smtplib.SMTP('smtp.gmail.com', 587) as smtp:
 	  smtp.ehlo()
 	  smtp.starttls()
 	  smtp.ehlo()
 
-	  smtp.login(email, psswd)
+	  smtp.login(site_email, psswd)
 	  print(em)
 	  subject = "Portfolio Website Message"
 	  body = f"Name: {name}\nEmail: {email}\n{msg}"
